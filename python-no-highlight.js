@@ -14,8 +14,6 @@ const observer = new MutationObserver(function (mutationList) {
         mutation.addedNodes.forEach(function (node) {
             if (node.matches('li') && node.firstElementChild.matches('a')) {
                 removeHighlightURLParam(node.firstElementChild)
-            } else {
-                console.debug("Not an anchor tag", node)
             }
         })
     })
